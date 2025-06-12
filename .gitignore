@@ -1,7 +1,7 @@
 # .gitignore
 
 # Python Virtual Environment
-venv/
+venv_sumiyasui/
 __pycache__/
 
 # Large data files
