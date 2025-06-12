@@ -47,8 +47,6 @@ sumiyasui-machi-recommender/
 
 Bash
 
-git clone https://github.com/<Your_GitHub_Username>/<Your_Repo_Name>.git
-cd <Your_Repo_Name>
 仮想環境の作成と有効化
 
 Bash
