@@ -16,9 +16,3 @@ scikit-learn==1.4.2
 
 # Map Visualization
 folium==0.16.0
-
-# Code Formatter
-black==24.4.2
-
-# Code Linter
-flake8==7.0.0

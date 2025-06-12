@@ -1,0 +1,11 @@
+# Code Formatter
+black==24.4.2
+
+# Code Linter
+flake8==7.0.0
+
+# Testing Framework
+pytest==8.2.2
+
+# Git Hooks Manager
+pre-commit==3.7.1
