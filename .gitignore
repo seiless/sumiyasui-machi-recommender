@@ -1,1 +1,11 @@
-"# Python Virtual Environmentvenv/__pycache__/# Large data filesdata/*.csv# OS specific files.DS_Store" 
+# .gitignore
+
+# Python Virtual Environment
+venv/
+__pycache__/
+
+# Large data files
+# data/*.csv
+
+# OS specific files
+.DS_Store
