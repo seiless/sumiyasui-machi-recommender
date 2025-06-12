@@ -197,5 +197,7 @@ if __name__ == "__main__":
     print(f"合計{len(final_df)}件の物件情報を収集しました。")
 
     output_filename = "suumo_listings.csv"
-    final_df.to_csv(output_filename, index=False, encoding="utf-8-sig")
+    final_df.to_csv(
+        config.DATA_DIR + output_filename, index=False, encoding="utf-8-sig"
+    )
     print(f"\n結果は'{output_filename}'ファイルに保存されました。")
