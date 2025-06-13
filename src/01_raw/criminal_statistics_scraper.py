@@ -31,7 +31,7 @@ def process_and_save_csv(csv_url: str, output_dir: str) -> str:
 
 if __name__ == "__main__":
     PAGE_URL = config.CRILINAL_TARGETS["東京都"]
-    OUTPUT_DIR = config.DATA_DIR
+    OUTPUT_DIR = config.CRIME
 
     print("1. CSVリンクの抽出を始めます...")
     csv_urls = extract_csv_links(PAGE_URL)
