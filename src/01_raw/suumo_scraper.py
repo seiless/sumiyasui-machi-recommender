@@ -153,6 +153,7 @@ if __name__ == "__main__":
     # configファイルから設定値を取得
     start_url = config.SUUMO_TARGETS["山手線"]
     MAX_PAGES = config.SCRAPING_MAX_PAGES
+    OUTPUT_DIR = config.SUUMO
 
     current_url = start_url
     all_results = []
@@ -194,6 +195,6 @@ if __name__ == "__main__":
 
     output_filename = "suumo_listings.csv"
     final_df.to_csv(
-        config.DATA_DIR + output_filename, index=False, encoding="utf-8-sig"
-    )
+        f"{OUTPUT_DIR}/{output_filename}", index=False, encoding="utf-8-sig"
+    )  # noqa: E501
     print(f"\n結果は'{output_filename}'ファイルに保存されました。")
