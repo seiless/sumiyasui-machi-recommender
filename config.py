@@ -8,7 +8,7 @@ PRIMARY_DATA_DIR = os.path.join(DATA_DIR, "03_primary")
 
 # RAW`データ出力先設定
 SUUMO = os.path.join(RAW_DATA_DIR, "suumo_scraping")
-CRIME = os.path.join(RAW_DATA_DIR, "keisicho_crime_stats")
+CRIME = os.path.join(RAW_DATA_DIR, "keishicho_crime_stats")
 
 # --- ヘッダー情報設定 ---
 HEADERS = {

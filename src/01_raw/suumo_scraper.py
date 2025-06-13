@@ -195,6 +195,6 @@ if __name__ == "__main__":
 
     output_filename = "suumo_listings.csv"
     final_df.to_csv(
-        f"{OUTPUT_DIR}{output_filename}", index=False, encoding="utf-8-sig"
+        f"{OUTPUT_DIR}/{output_filename}", index=False, encoding="utf-8-sig"
     )  # noqa: E501
     print(f"\n結果は'{output_filename}'ファイルに保存されました。")
