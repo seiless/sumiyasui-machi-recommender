@@ -4,10 +4,11 @@ import pandas as pd
 import time
 import random
 from urllib.parse import urljoin
+from typing import List, Tuple, Dict
 import config
 
 
-def scrape_single_page(page_url):
+def scrape_single_page(page_url: str) -> Tuple[List[Dict], str]:
     """
     指定された単一ページのURLから物件情報をスクレイピングし、
     「次のページ」のURLを返します。
@@ -15,12 +16,7 @@ def scrape_single_page(page_url):
     response = requests.get(page_url, headers=config.HEADERS)
     response.raise_for_status()  # リクエストが失敗した場合、エラーを発生させます。
     soup = BeautifulSoup(response.content, "lxml")
-
-    # --- [ロジック全体をユーザー様の成功したコードに置き換え] ---
-    # --- [사용자님의 성공한 코드로 전체 로직 교체] ---
     page_properties = []
-
-    # ユーザー様が発見した、正確な最上位コンテナのセレクタを使用します。
     listings = soup.find_all(
         "div", class_="property property--highlight js-property js-cassetLink"
     )
