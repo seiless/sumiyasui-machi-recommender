@@ -10,5 +10,6 @@ pytest==8.2.2
 # for env
 python-dotenv==1.1.1
 
-# for SQLServer
+# for Database
 sqlalchemy==2.0.41
+mysql-connector-python==9.0.0

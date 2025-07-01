@@ -1,12 +1,12 @@
 import pandas as pd
-from pathlib import Path
 import os
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 import logging
 import traceback
 from dotenv import load_dotenv
+from src.config import PROJECT_ROOT
 
-env_path = Path("..") / ".env"
+env_path = PROJECT_ROOT / ".env"
 load_dotenv(dotenv_path=env_path)
 
 logger = logging.getLogger(__name__)
@@ -26,7 +26,7 @@ def create_master_table_from_sqlserver(
     try:
         conn = CONNECTION.connect()
         logger.info("connection is succed")
-        sql_query = f"SELECT * FROM {schema_name}.{table_name}"
+        sql_query = text(f"SELECT * FROM {schema_name}.{table_name}")
 
         df_from_db = pd.read_sql(sql_query, conn)
 

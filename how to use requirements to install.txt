@@ -1,0 +1,7 @@
+activate
+
+\sumiyasui_machi_recommender\venv_sumiyasui\Scripts\activate
+
+install
+
+pip install -r requirements.txt
