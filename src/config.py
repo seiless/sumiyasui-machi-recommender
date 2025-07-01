@@ -12,6 +12,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SUUMO = os.path.join(RAW_DATA_DIR, "suumo_scraping")
 CRIME = os.path.join(RAW_DATA_DIR, "keishicho_crime_stats")
 
+# --- SQLサーバー関連設定 ---
+SCHEMA_NAME = "sumiyasui_machi_recommender"
+
 # --- ヘッダー情報設定 ---
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"  # noqa: E501
