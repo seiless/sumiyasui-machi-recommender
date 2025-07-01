@@ -5,7 +5,7 @@ import time
 import random
 from urllib.parse import urljoin
 from typing import List, Tuple, Dict
-import config
+import src.config as config
 
 
 def scrape_single_page(page_url: str) -> Tuple[List[Dict], str]:

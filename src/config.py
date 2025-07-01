@@ -1,10 +1,12 @@
 import os
+from pathlib import Path
 
 # --- フォルダーパス設定 ---
 DATA_DIR = "data/"
-RAW_DATA_DIR = os.path.join(DATA_DIR, "01_raw")
-INTERMEDIATE_DATA_DIR = os.path.join(DATA_DIR, "02_intermediate")
-PRIMARY_DATA_DIR = os.path.join(DATA_DIR, "03_primary")
+RAW_DATA_DIR = os.path.join(DATA_DIR, "l01_raw")
+INTERMEDIATE_DATA_DIR = os.path.join(DATA_DIR, "l02_intermediate")
+PRIMARY_DATA_DIR = os.path.join(DATA_DIR, "l03_primary")
+PROJECT_ROOT = Path(__file__).resolve()
 
 # RAW`データ出力先設定
 SUUMO = os.path.join(RAW_DATA_DIR, "suumo_scraping")

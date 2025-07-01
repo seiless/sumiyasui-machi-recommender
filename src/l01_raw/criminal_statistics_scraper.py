@@ -2,13 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from urllib.parse import urljoin, urlparse
-import config
+from src import config
 
 
 def extract_csv_links(base_url: str) -> list[str]:
     response = requests.get(base_url, headers=config.HEADERS)
     response.raise_for_status()
-    soup = BeautifulSoup(response.content, "lxml")
+    soup = BeautifulSoup(response.content, "html.parser")
 
     links = soup.find_all("a", class_="csv")
     full_links = [urljoin(base_url, link.get("href")) for link in links]
