@@ -20,6 +20,14 @@ CONNECTION = create_engine(DB_CONNECTION_STR) if DB_CONNECTION_STR else None
 
 
 def extract_csv_links(base_url: str) -> list[str]:
+    """_summary_
+
+    Args:
+        base_url (str): _description_
+
+    Returns:
+        list[str]: _description_
+    """
     response = requests.get(base_url, headers=config.HEADERS)
     response.raise_for_status()
     soup = BeautifulSoup(response.content, "html.parser")
@@ -30,14 +38,14 @@ def extract_csv_links(base_url: str) -> list[str]:
     return full_links
 
 
-def process_and_return_df(csv_url: str) -> pd.DataFrame:
+def process_and_return_df(csv_url: str) -> list[pd.DataFrame, str]:
     """_summary_
 
     Args:
         csv_url (str): _description_
 
     Returns:
-        pd.DataFrame: _description_
+        list[pd.DataFrame, str]: _description_
     """
     relative_path = urlparse(csv_url).path.split("/")[-1]
     filename = relative_path.replace(".csv", "").replace(".", "_").lower()
